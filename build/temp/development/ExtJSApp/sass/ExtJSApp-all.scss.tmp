@@ -1339,3 +1339,4 @@ $current-package: false;
 $current-resource-root: $ExtJSApp-resource-root;
 $relative-image-path-for-uis: $ExtJSApp-resource-path;
 @import '../../../../../classic/sass/src/view/main/Main';
+@import '../../../../../classic/sass/src/view/main/Main';
