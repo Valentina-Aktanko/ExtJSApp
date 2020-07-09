@@ -15,6 +15,7 @@ Ext.define('ExtJSApp.view.login.Login', {
 
   items: {
       xtype: 'form',
+      name: 'loginForm',
       reference: 'form',
       items: [{
         xtype: 'textfield',

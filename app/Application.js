@@ -20,7 +20,13 @@ Ext.define('ExtJSApp.Application', {
     ],
 
     launch: function () {
-        // TODO - Launch the application
+        var loggedIn;
+
+        loggedIn = localstorage.getItem('ExtJSAppLoggedIn');
+
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login'
+        });
     },
 
     onAppUpdate: function () {
