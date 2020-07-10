@@ -22,11 +22,13 @@ Ext.define('ExtJSApp.Application', {
     launch: function () {
         var loggedIn;
 
-        loggedIn = localstorage.getItem('ExtJSAppLoggedIn');
+        loggedIn = localStorage.getItem('ExtLoggedIn');
 
+        debugger
         Ext.create({
             xtype: loggedIn ? 'app-main' : 'login'
         });
+
     },
 
     onAppUpdate: function () {

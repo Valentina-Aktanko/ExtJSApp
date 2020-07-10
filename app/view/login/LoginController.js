@@ -3,13 +3,10 @@ Ext.define('ExtJSApp.view.login.LoginController', {
   alias: 'controller.login',
 
 onLoginClick: function() {
+  debugger
 
+  localStorage.setItem('ExtLoggedIn', true);
   
-
-
-  localStorage.setItem('ExtJSAppLoggedIn', true);
-  
-
   this.getView().destroy();
   Ext.create({
     xtype: 'app-main'

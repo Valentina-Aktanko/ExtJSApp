@@ -1,4 +1,5 @@
 Ext.define('ExtJSApp.view.login.Login', {
+  
   extend: 'Ext.window.Window',
   xtype: 'login',
 
@@ -9,7 +10,7 @@ Ext.define('ExtJSApp.view.login.Login', {
 
   controller: 'login',
   bodyPadding: 10,
-  title: 'Login Window',
+  title: 'Окно входа',
   closable: false,
   autoShow: true,
 
@@ -20,25 +21,30 @@ Ext.define('ExtJSApp.view.login.Login', {
       items: [{
         xtype: 'textfield',
         name: 'username',
-        fieldLabel: 'Логин',
+        fieldLabel: 'Пользователь:',
+        regex: /admin/,
+        invalidText: 'Логин должен быть "admin"',
         allowBlank: false
       }, {
         xtype: 'textfield',
         name: 'password',
         inputType: 'password',
-        fieldLabel: 'Пароль',
+        fieldLabel: 'Пароль:',
+        regex: /padmin/,
+        invalidText: 'Пароль должен быть "padmin"',
         allowBlank: false
       }, {
         xtype: 'displayfield',
         hideEmptyLabel: false,
-        value: 'Введите пароль'
+        value: 'Введите Ваш пароль.'
       }],
       buttons: [{
         text: 'Войти',
         formBind: true,
         listeners: {
           click: 'onLoginClick'
-        }
-      }]
+        },
+        iconCls: 'x-fa fa-arrow-right'
+      }],
   }
 });

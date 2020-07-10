@@ -44,7 +44,7 @@ Ext.define('ExtJSApp.view.main.Main', {
     flex: 1,
     layout: {
       align: 'stretch',
-      overflowHandler: 'none',
+      overflowHandler: 'none'
     }
   },
 

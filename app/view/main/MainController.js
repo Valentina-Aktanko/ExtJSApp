@@ -20,4 +20,11 @@ Ext.define('ExtJSApp.view.main.MainController', {
         }
     },
 
+    onClickButton: function () {
+        localStorage.removeItem('ExtLoggedIn');
+        this.getView().destroy();
+        Ext.create({
+            xtype: 'login'
+        });
+    }
 });
