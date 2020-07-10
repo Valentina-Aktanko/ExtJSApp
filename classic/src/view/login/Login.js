@@ -22,16 +22,16 @@ Ext.define('ExtJSApp.view.login.Login', {
         xtype: 'textfield',
         name: 'username',
         fieldLabel: 'Пользователь:',
-        regex: /admin/,
-        invalidText: 'Логин должен быть "admin"',
+        regex: /^admin$/,
+        invalidText: 'Неверный логин',
         allowBlank: false
       }, {
         xtype: 'textfield',
         name: 'password',
         inputType: 'password',
         fieldLabel: 'Пароль:',
-        regex: /padmin/,
-        invalidText: 'Пароль должен быть "padmin"',
+        regex: /^padmin$/,
+        invalidText: 'Неверный пароль',
         allowBlank: false
       }, {
         xtype: 'displayfield',

@@ -6,25 +6,30 @@
  */
 Ext.define('ExtJSApp.view.main.MainController', {
 
-    extend: 'Ext.app.ViewController',
+  extend: 'Ext.app.ViewController',
 
-    alias: 'controller.main',
+  alias: 'controller.main',
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
+  onItemSelected: function (sender, record) {
+    Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+  },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
-    },
-
-    onClickButton: function () {
-        localStorage.removeItem('ExtLoggedIn');
-        this.getView().destroy();
-        Ext.create({
-            xtype: 'login'
-        });
+  onConfirm: function (choice) {
+    if (choice === 'yes') {
+      //
     }
+  },
+
+
+  onClickButtonProducts: function () {
+    // 
+  },
+
+  onClickButtonExit: function () {
+    localStorage.removeItem('ExtLoggedIn');
+    this.getView().destroy();
+    Ext.create({
+      xtype: 'login'
+    });
+  }
 });
