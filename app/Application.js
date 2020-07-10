@@ -21,7 +21,7 @@ Ext.define('ExtJSApp.Application', {
 
     launch: function () {
         var loggedIn;
-
+debugger
         loggedIn = localStorage.getItem('ExtLoggedIn');
 
         debugger
