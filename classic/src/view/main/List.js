@@ -6,32 +6,47 @@ Ext.define('ExtJSApp.view.main.List', {
   xtype: 'mainlist',
 
   requires: [
-    'ExtJSApp.store.Personnel'
+    'ExtJSApp.store.Products'
   ],
 
-  title: 'Personnel',
+  title: 'Список товаров',
 
   store: {
-    type: 'personnel'
+    type: 'products'
   },
 
-  columns: [{
-      text: 'Name',
-      dataIndex: 'name'
+  columns: [
+    {
+      text: 'ID',
+      dataIndex: 'id',
     },
     {
-      text: 'Email',
-      dataIndex: 'email',
+      text: 'Имя',
+      dataIndex: 'name',
       flex: 1
     },
     {
-      text: 'Phone',
-      dataIndex: 'phone',
+      text: 'Описание',
+      dataIndex: 'description',
+      flex: 1
+    },
+    {
+      text: 'Цена',
+      dataIndex: 'price',
+      flex: 1,
+      xtype: 'numbercolumn',
+      format:'0.00'
+    },
+    {
+      text: 'Кол-во',
+      dataIndex: 'count',
       flex: 1
     }
   ],
 
   listeners: {
-    select: 'onItemSelected'
+    cellclick: {
+      fn: 'onItemClick'
+    }
   }
 });

@@ -10,8 +10,10 @@ Ext.define('ExtJSApp.view.main.MainController', {
 
   alias: 'controller.main',
 
-  onItemSelected: function (sender, record) {
-    Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+  titleCount: 0,
+
+  onItemClick: function (sender, record) {
+    Ext.Msg.confirm('Confirm', 'Клик по товару', 'onConfirm', this);
   },
 
   onConfirm: function (choice) {
@@ -20,9 +22,18 @@ Ext.define('ExtJSApp.view.main.MainController', {
     }
   },
 
-
   onClickButtonProducts: function () {
-    // 
+    var tabPanel= this.getView();
+    var addIndex = tabPanel.items.length -1;
+    
+    tabPanel.add(addIndex,{
+        title:'Товары',
+        items: [{
+          xtype: 'mainlist'
+        }]
+    });
+
+    tabPanel.setActiveTab(tabPanel.items.length);
   },
 
   onClickButtonExit: function () {

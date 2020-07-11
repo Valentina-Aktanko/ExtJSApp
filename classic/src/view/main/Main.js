@@ -24,7 +24,6 @@ Ext.define('ExtJSApp.view.main.Main', {
 
   ui: 'navigation',
 
-  tabBarHeaderPosition: 1,
   titleRotation: 0,
   tabRotation: 0,
 
@@ -41,7 +40,7 @@ Ext.define('ExtJSApp.view.main.Main', {
     items: [{
       xtype: 'button',
       text: 'Товары',
-      margin: '10 0',
+      margin: '10 10',
       handler: 'onClickButtonProducts'
     }, {
       xtype: 'button',
@@ -57,6 +56,13 @@ Ext.define('ExtJSApp.view.main.Main', {
       align: 'stretch',
       overflowHandler: 'none'
     }
+  },
+
+  bbar: {
+    xtype: 'pagingtoolbar',
+    displayInfo: true,
+    displayMsg: 'Page {0} - {1} of {2}',
+    emptyMsg: 'No items to display'
   },
 
   responsiveConfig: {
@@ -87,29 +93,9 @@ Ext.define('ExtJSApp.view.main.Main', {
   },
 
   items: [{
-    title: 'Home',
-    iconCls: 'fa-home',
-    // The following grid shares a store with the classic version's grid as well!
+    title: 'Товары',
     items: [{
       xtype: 'mainlist'
     }]
-  }, {
-    title: 'Users',
-    iconCls: 'x-fa fa-user',
-    bind: {
-      html: '{loremIpsum}'
-    }
-  }, {
-    title: 'Groups',
-    iconCls: 'fa-users',
-    bind: {
-      html: '{loremIpsum}'
-    }
-  }, {
-    title: 'Settings',
-    iconCls: 'fa-cog',
-    bind: {
-      html: '{loremIpsum}'
-    }
   }]
 });
