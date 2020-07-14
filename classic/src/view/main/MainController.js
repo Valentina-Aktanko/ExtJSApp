@@ -8,13 +8,11 @@ Ext.define('ExtJSApp.view.main.MainController', {
 
   extend: 'Ext.app.ViewController',
 
-  alias: 'controller.main',
+  alias: 'controller.MainController',
 
-  titleCount: 0,
-
-  onItemClick: function (sender, record) {
-    Ext.Msg.confirm('Confirm', 'Клик по товару', 'onConfirm', this);
-  },
+  // onItemClick: function (sender, record) {
+  //   Ext.Msg.confirm('Confirm', 'Клик по товару', 'onConfirm', this);
+  // },
 
   onConfirm: function (choice) {
     if (choice === 'yes') {
@@ -26,21 +24,23 @@ Ext.define('ExtJSApp.view.main.MainController', {
     var tabPanel= this.getView();
     var addIndex = tabPanel.items.length -1;
     
-    tabPanel.add(addIndex,{
+    tabPanel.add(
+      addIndex, 
+      {
         title:'Товары',
         items: [{
-          xtype: 'mainlist'
+          xtype: 'productGrid'
         }]
-    });
+      });
 
-    tabPanel.setActiveTab(tabPanel.items.length);
+    tabPanel.setActiveTab(0);
   },
 
   onClickButtonExit: function () {
     localStorage.removeItem('ExtLoggedIn');
     this.getView().destroy();
     Ext.create({
-      xtype: 'login'
+      xtype: 'loginWindow'
     });
   }
 });

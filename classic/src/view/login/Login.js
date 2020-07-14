@@ -1,14 +1,14 @@
 Ext.define('ExtJSApp.view.login.Login', {
   
   extend: 'Ext.window.Window',
-  xtype: 'login',
+  xtype: 'loginWindow',
 
   requires: [
     'ExtJSApp.view.login.LoginController',
     'Ext.form.Panel'
   ],
 
-  controller: 'login',
+  controller: 'LoginController',
   bodyPadding: 10,
   title: 'Окно входа',
   closable: false,

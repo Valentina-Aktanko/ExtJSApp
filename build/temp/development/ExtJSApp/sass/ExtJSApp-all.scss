@@ -876,14 +876,18 @@ $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-extjsapp-application: dynamic(true);;
+$include-extjsapp-model-product: dynamic(true);;
 $include-extjsapp-store-personnel: dynamic(true);;
 $include-extjsapp-store-products: dynamic(true);;
 $include-extjsapp-view-login-login: dynamic(true);;
 $include-extjsapp-view-login-logincontroller: dynamic(true);;
-$include-extjsapp-view-main-list: dynamic(true);;
 $include-extjsapp-view-main-main: dynamic(true);;
 $include-extjsapp-view-main-maincontroller: dynamic(true);;
 $include-extjsapp-view-main-mainmodel: dynamic(true);;
+$include-extjsapp-view-productcard-productcard: dynamic(true);;
+$include-extjsapp-view-productcard-productcardcontroller: dynamic(true);;
+$include-extjsapp-view-productgrid-productgrid: dynamic(true);;
+$include-extjsapp-view-productgrid-productgridcontroller: dynamic(true);;
 $output-paths: ("path": "../../classic/resources", "shared": "../../resources");
 
 /* ======================== ETC ======================== */

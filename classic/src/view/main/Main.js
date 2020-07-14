@@ -15,11 +15,11 @@ Ext.define('ExtJSApp.view.main.Main', {
 
     'ExtJSApp.view.main.MainController',
     'ExtJSApp.view.main.MainModel',
-    'ExtJSApp.view.main.List'
   ],
 
-  controller: 'main',
-  viewModel: 'main',
+  controller: 'MainController',
+  viewModel: 'MainViewModel',
+  
   plugins: 'viewport',
 
   ui: 'navigation',
@@ -58,13 +58,6 @@ Ext.define('ExtJSApp.view.main.Main', {
     }
   },
 
-  bbar: {
-    xtype: 'pagingtoolbar',
-    displayInfo: true,
-    displayMsg: 'Page {0} - {1} of {2}',
-    emptyMsg: 'No items to display'
-  },
-
   responsiveConfig: {
     tall: {
       headerPosition: 'top'
@@ -95,7 +88,7 @@ Ext.define('ExtJSApp.view.main.Main', {
   items: [{
     title: 'Товары',
     items: [{
-      xtype: 'mainlist'
+      xtype: 'productGrid'
     }]
   }]
 });

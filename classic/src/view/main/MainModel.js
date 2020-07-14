@@ -4,7 +4,13 @@
 Ext.define('ExtJSApp.view.main.MainModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.main',
+    alias: 'viewmodel.MainViewModel',
+
+    stores: {
+        ProductsGridStore: {
+            type: 'Products'
+        }
+    },
 
     data: {
         name: 'ExtJSApp',

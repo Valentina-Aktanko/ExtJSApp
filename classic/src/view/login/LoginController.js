@@ -1,6 +1,6 @@
 Ext.define('ExtJSApp.view.login.LoginController', {
   extend: 'Ext.app.ViewController',
-  alias: 'controller.login',
+  alias: 'controller.LoginController',
 
 onLoginClick: function() {
 

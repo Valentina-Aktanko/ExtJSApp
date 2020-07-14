@@ -26,7 +26,7 @@ Ext.define('ExtJSApp.Application', {
     loggedIn = localStorage.getItem('ExtLoggedIn');
 
     Ext.create({
-      xtype: loggedIn ? 'app-main' : 'login'
+      xtype: loggedIn ? 'app-main' : 'loginWindow'
     });
 
   },
