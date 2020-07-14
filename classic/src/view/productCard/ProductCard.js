@@ -27,28 +27,25 @@ Ext.define('ExtJSApp.view.productCard.ProductCard', {
     reference: 'form',
     items: [{
         xtype: 'displayfield',
-        name: 'id',
         fieldLabel: 'ID:',
-        hideEmptyLabel: false,
-        value: '{}'
+        name: 'id',
+        hideEmptyLabel: false
       },
       {
         xtype: 'displayfield',
-        name: 'name',
         fieldLabel: 'Наименование:',
-        hideEmptyLabel: false,
-        value: '{}',
+        name: 'name',
         bind: '{name}'
       },
       {
-        xtype: 'textfield',
-        name: 'price',
-        fieldLabel: 'Цена:'
+        xtype: 'numberfield',
+        fieldLabel: 'Цена:',
+        name: 'price'
       },
       {
-        xtype: 'textfield',
-        name: 'count',
+        xtype: 'numberfield',
         fieldLabel: 'Кол-во:',
+        name: 'count'
       }
     ],
     buttons: [{
