@@ -92,5 +92,5 @@ Ext.define('ExtJSApp.view.main.Main', {
         xtype: 'product-grid'
       }
     ]
-  }]
+  }],
 });

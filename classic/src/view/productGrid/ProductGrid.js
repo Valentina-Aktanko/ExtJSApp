@@ -7,7 +7,7 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
 
   requires: [
     'ExtJSApp.view.productGrid.ProductGridController',
-    'Ext.toolbar.Paging',
+    'Ext.toolbar.Paging'
   ],
 
   controller: 'productGridController',
@@ -55,10 +55,6 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
     displayInfo: true,
     bind: '{ProductsGridStore}',
   },
-
-  signTpl: '<span style="' +
-    'color:{value:sign(\'"#cf4c35"\',\'"#73b51e"\')}"' +
-    '>{text}</span>',
 
   listeners: {
     cellclick: {
