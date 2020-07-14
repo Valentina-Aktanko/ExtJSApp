@@ -18,7 +18,7 @@ Ext.define('ExtJSApp.view.productGrid.ProductGridController', {
     // });
 
     var win = Ext.create({
-      xtype: 'productWindow'
+      xtype: 'product-window'
     });
 
     win.down('form').loadRecord(record);

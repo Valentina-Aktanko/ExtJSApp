@@ -886,6 +886,7 @@ $include-extjsapp-view-main-maincontroller: dynamic(true);;
 $include-extjsapp-view-main-mainmodel: dynamic(true);;
 $include-extjsapp-view-productcard-productcard: dynamic(true);;
 $include-extjsapp-view-productcard-productcardcontroller: dynamic(true);;
+$include-extjsapp-view-productfilterform-productfilterform: dynamic(true);;
 $include-extjsapp-view-productgrid-productgrid: dynamic(true);;
 $include-extjsapp-view-productgrid-productgridcontroller: dynamic(true);;
 $output-paths: ("path": "../../classic/resources", "shared": "../../resources");

@@ -3,7 +3,7 @@
  */
 Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
   extend: 'Ext.grid.Panel',
-  xtype: 'productGrid',
+  xtype: 'product-grid',
 
   requires: [
     'ExtJSApp.view.productGrid.ProductGridController',
@@ -12,8 +12,8 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
 
   controller: 'productGridController',
   title: 'Список товаров',
-
   bind: '{ProductsGridStore}',
+
   columns: [{
       text: 'ID',
       dataIndex: 'id',
@@ -42,10 +42,19 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
       flex: 1
     }
   ],
+ 
+  tbar: [
+    {
+      xtype: 'product-filters',
+    }
+    
+  ],
 
-  // signTpl: '<span style="' +
-  //       'color:{"red")}"' +
-  //       '>{text}</span>',
+  bbar: {
+    xtype: 'pagingtoolbar',
+    displayInfo: true,
+    bind: '{ProductsGridStore}',
+  },
 
   signTpl: '<span style="' +
     'color:{value:sign(\'"#cf4c35"\',\'"#73b51e"\')}"' +
@@ -55,26 +64,5 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
     cellclick: {
       fn: 'onCellClick'
     }
-  },
-
-  bbar: {
-    xtype: 'pagingtoolbar',
-    displayInfo: true,
-    bind: '{ProductsGridStore}',
-    // store: {
-    //   type: 'Products'
-    // },
-    // displayMsg: 'Displaying topics {0} - {1} of {2}',
-    // emptyMsg: "No items to display"
-  },
-
-  // dockedItems: [{
-  //   xtype: 'pagingtoolbar',
-  //   // store: {
-  //   //   type: 'products'
-  //   // },
-  //   bind: '{ProductsGridStore}',
-  //   dock: 'bottom',
-  //   displayInfo: true
-  // }],
+  }
 });

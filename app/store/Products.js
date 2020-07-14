@@ -3,7 +3,6 @@ Ext.define('ExtJSApp.store.Products', {
   alias: 'store.Products',
   id: 'ProductsStore',
   model: 'ExtJSApp.model.Product',
-  autoLoad: {start: 0, limit: 5},
   pageSize: 5,
   proxy: {
     type: 'memory',

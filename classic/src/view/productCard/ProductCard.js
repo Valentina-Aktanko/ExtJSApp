@@ -1,6 +1,6 @@
 Ext.define('ExtJSApp.view.productCard.ProductCard', {
   extend: 'Ext.window.Window',
-  xtype: 'productWindow',
+  xtype: 'product-window',
 
   requires: [
     'ExtJSApp.view.productCard.ProductCardController',
