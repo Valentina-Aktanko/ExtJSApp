@@ -14,7 +14,7 @@ Ext.define('ExtJSApp.view.main.Main', {
     'Ext.window.MessageBox',
 
     'ExtJSApp.view.main.MainController',
-    'ExtJSApp.view.main.MainModel',
+    'ExtJSApp.view.main.MainViewModel',
   ],
 
   controller: 'MainController',
@@ -89,7 +89,8 @@ Ext.define('ExtJSApp.view.main.Main', {
     title: 'Товары',
     items: [
       {
-        xtype: 'product-grid'
+        xtype: 'product-grid',
+        viewModel: 'productGridViewModel'
       }
     ]
   }],

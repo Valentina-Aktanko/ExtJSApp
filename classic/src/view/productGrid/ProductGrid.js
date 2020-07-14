@@ -13,6 +13,12 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
   controller: 'productGridController',
   title: 'Список товаров',
   bind: '{ProductsGridStore}',
+ 
+  // stores: {
+  //   ProductsGridStore: {
+  //       type: 'Products'
+  //   }
+  // },
 
   columns: [{
       text: 'ID',
@@ -53,7 +59,7 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
   bbar: {
     xtype: 'pagingtoolbar',
     displayInfo: true,
-    bind: '{ProductsGridStore}',
+    bind: '{ProductsGridStore}',    
   },
 
   listeners: {

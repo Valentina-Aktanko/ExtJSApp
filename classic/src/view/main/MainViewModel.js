@@ -1,16 +1,16 @@
 /**
  * This class is the view model for the Main view of the application.
  */
-Ext.define('ExtJSApp.view.main.MainModel', {
+Ext.define('ExtJSApp.view.main.MainViewModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.MainViewModel',
 
-    stores: {
-        ProductsGridStore: {
-            type: 'Products'
-        }
-    },
+    // stores: {
+    //     ProductsGridStore: {
+    //         type: 'Products'
+    //     }
+    // },
 
     data: {
         name: 'ExtJSApp',
