@@ -19,7 +19,7 @@ Ext.define('ExtJSApp.view.main.Main', {
 
   controller: 'MainController',
   viewModel: 'MainViewModel',
-  
+
   plugins: 'viewport',
 
   ui: 'navigation',
@@ -87,11 +87,9 @@ Ext.define('ExtJSApp.view.main.Main', {
 
   items: [{
     title: 'Товары',
-    items: [
-      {
-        xtype: 'product-grid',
-        viewModel: 'productGridViewModel'
-      }
-    ]
+    items: [{
+      xtype: 'product-grid',
+      viewModel: 'ProductGridViewModel'
+    }]
   }],
 });

@@ -1,20 +1,6 @@
 Ext.define('ExtJSApp.view.productGrid.ProductGridController', {
   extend: 'Ext.app.ViewController',
-  alias: 'controller.productGridController',
-
-  onCellClick: function (view, td, cellIndex, record, tr, rowIndex, e, eOpts) {
-
-    if (cellIndex !== 1) {
-      return;
-    }
-
-    var win = Ext.create({
-      xtype: 'product-window'
-    });
-
-    win.down('form').loadRecord(record);
-    win.show();
-  },
+  alias: 'controller.ProductGridController',
 
   renderCount: function (value, meta) {
     if(value === 0) {
@@ -23,4 +9,17 @@ Ext.define('ExtJSApp.view.productGrid.ProductGridController', {
     return value;
   },
 
+  onCellClick: function (view, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+
+    if (cellIndex !== 1) {
+      return;
+    }
+
+    var productWindow = Ext.create({
+      xtype: 'product-window'
+    });
+
+    productWindow.down('form').loadRecord(record);
+    productWindow.show();
+  }
 });

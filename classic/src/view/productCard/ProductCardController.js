@@ -1,23 +1,22 @@
 Ext.define('ExtJSApp.view.productCard.ProductCardController', {
   extend: 'Ext.app.ViewController',
-  alias: 'controller.productCardController',
+  alias: 'controller.ProductCardController',
 
-  onSaveClick: function() {
+  onSaveClick: function () {
     var form = this.getView().down('form');
     var record = form.getRecord();
     var values = form.getValues();
     var store = Ext.getStore('ProductsStore');
     record.set(values);
-    debugger
     store.sync({
-        success:function() {
-            store.load()
-        }
+      success: function () {
+        store.load()
+      }
     });
-    
+
   },
 
-  onCancelClick: function() {
+  onCancelClick: function () {
     this.getView().destroy();
   }
 });

@@ -1,9 +1,9 @@
-Ext.define('ExtJSApp.view.productGrid.productGridViewModel', {
+Ext.define('ExtJSApp.view.productGrid.ProductGridViewModel', {
   extend: 'Ext.app.ViewModel',
-  alias: 'viewmodel.productGridViewModel',
+  alias: 'viewmodel.ProductGridViewModel',
   stores: {
     ProductsGridStore: {
-        type: 'Products'
+      type: 'Products'
     },
   }
 });

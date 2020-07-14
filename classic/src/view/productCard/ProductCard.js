@@ -6,55 +6,68 @@ Ext.define('ExtJSApp.view.productCard.ProductCard', {
     'ExtJSApp.view.productCard.ProductCardController',
     'Ext.form.Panel'
   ],
-
-  controller: 'productCardController',
+  
+  width: 500,
+  title: 'Карточка товара:',
   bodyPadding: 10,
-  title: 'Карточка товара',
   closable: false,
-  // autoShow: true,
+  controller: 'ProductCardController',
+
+  viewModel: {
+    type: 'ProductCardViewModel'
+  },
+
+  bind: {
+    title: 'Карточка товара: {name}'
+  },
 
   items: {
-      xtype: 'form',
-      name: 'productForm',
-      reference: 'form',
-      items: [{
+    xtype: 'form',
+    name: 'productForm',
+    reference: 'form',
+    items: [{
         xtype: 'displayfield',
         name: 'id',
         fieldLabel: 'ID:',
         hideEmptyLabel: false,
         value: '{}'
-      }, {
+      },
+      {
         xtype: 'displayfield',
         name: 'name',
         fieldLabel: 'Наименование:',
         hideEmptyLabel: false,
-        value: '{}'
-      }, {
+        value: '{}',
+        bind: '{name}'
+      },
+      {
         xtype: 'textfield',
         name: 'price',
-        fieldLabel: 'Цена:',
-        // allowBlank: false
-      }, {
+        fieldLabel: 'Цена:'
+      },
+      {
         xtype: 'textfield',
         name: 'count',
         fieldLabel: 'Кол-во:',
-        // allowBlank: false
-      }],
-      buttons: [
-        {
-          text: 'Сохранить',
-          formBind: true,
-          listeners: {
-            click: 'onSaveClick'
-          }
-        }, {
-          text: 'Отмена',
-          formBind: true,
-          listeners: {
-            click: 'onCancelClick'
-          }
+      }
+    ],
+    buttons: [{
+        text: 'Сохранить',
+        formBind: true,
+        listeners: {
+          click: 'onSaveClick'
         }
-      ],
+      },
+      {
+        text: 'Отмена',
+        formBind: true,
+        listeners: {
+          click: 'onCancelClick'
+        }
+      }
+    ],
+    defaults: {
+      anchor: '100%'
+    }
   }
-
 });

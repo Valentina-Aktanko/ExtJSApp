@@ -10,17 +10,12 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
     'Ext.toolbar.Paging'
   ],
 
-  controller: 'productGridController',
+  controller: 'ProductGridController',
   title: 'Список товаров',
   bind: '{ProductsGridStore}',
- 
-  // stores: {
-  //   ProductsGridStore: {
-  //       type: 'Products'
-  //   }
-  // },
 
-  columns: [{
+  columns: [
+    {
       text: 'ID',
       dataIndex: 'id',
     },
@@ -48,18 +43,18 @@ Ext.define('ExtJSApp.view.productGrid.ProductGrid', {
       flex: 1
     }
   ],
- 
+
   tbar: [
     {
       xtype: 'product-filters',
     }
-    
+
   ],
 
   bbar: {
     xtype: 'pagingtoolbar',
     displayInfo: true,
-    bind: '{ProductsGridStore}',    
+    bind: '{ProductsGridStore}',
   },
 
   listeners: {

@@ -10,16 +10,6 @@ Ext.define('ExtJSApp.view.main.MainController', {
 
   alias: 'controller.MainController',
 
-  // onItemClick: function (sender, record) {
-  //   Ext.Msg.confirm('Confirm', 'Клик по товару', 'onConfirm', this);
-  // },
-
-  onConfirm: function (choice) {
-    if (choice === 'yes') {
-      //
-    }
-  },
-
   onClickButtonProducts: function () {
     var tabPanel= this.getView();
     var addIndex = tabPanel.items.length -1;
