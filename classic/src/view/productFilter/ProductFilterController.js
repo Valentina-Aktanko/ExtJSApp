@@ -6,10 +6,11 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilterController', {
     var value = object.getValue();
     var eventName = e.target.name;
     var grid = this.getView().up('product-grid'),
-       store = grid.getStore();
+       store = grid.getStore(),
+       form = grid.getForm();
     
-    if (e.getKey() !== 13 || !value) {
-        return;
+    if (e.getKey() !== 13 || !value || !form.isValid()) {
+      return;
     }
       
     if (eventName === 'id') {

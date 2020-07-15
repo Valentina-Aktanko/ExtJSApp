@@ -14,7 +14,7 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilter', {
       name: 'id',
       emptyText: 'Введите фильтр...',
       regex: /^\d+$/,
-      regexText: 'Only positive numbers',
+      regexText: 'Только положительные числа',
       hideTrigger: true,
       enableKeyEvents: true,
       listeners: {
