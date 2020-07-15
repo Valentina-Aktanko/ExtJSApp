@@ -20,7 +20,7 @@ Ext.define('ExtJSApp.view.main.MainController', {
         title:'Товары',
         items: [{
           xtype: 'product-grid',
-          viewModel: 'productGridViewModel'
+          viewModel: 'ProductGridViewModel'
         }]
       });
 

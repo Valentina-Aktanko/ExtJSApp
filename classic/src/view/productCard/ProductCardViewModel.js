@@ -8,7 +8,7 @@ Ext.define('ExtJSApp.view.productCard.ProductCardViewModel', {
   },
 
   formulas: {
-    name: function (set) {
+    name: function () {
       var form = this.getView().down('form');
       var record = form.getRecord();
       return record.data.name;
