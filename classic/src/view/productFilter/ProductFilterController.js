@@ -5,9 +5,10 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilterController', {
   onKeyUp: function (object, e, eOpts) {
     var value = object.getValue();
     var eventName = e.target.name;
+    var form = this.getView().getForm();
     var grid = this.getView().up('product-grid'),
-       store = grid.getStore(),
-       form = grid.getForm();
+       store = grid.getStore();
+       
     
     if (e.getKey() !== 13 || !value || !form.isValid()) {
       return;
