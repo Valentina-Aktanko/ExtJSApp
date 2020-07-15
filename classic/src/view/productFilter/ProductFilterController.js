@@ -3,15 +3,20 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilterController', {
   alias: 'controller.ProductFilterController',
 
   onKeyUp: function (object, e, eOpts) {
-    if (e.getKey() !== 13) {
+    var value = object.getValue();
+    var eventName = e.target.name;
+    var grid = this.getView().up('product-grid'),
+       store = grid.getStore();
+    
+    if (e.getKey() !== 13 || !value) {
         return;
     }
-    
-    var value = object.getValue();
-    var grid = this.getView().up('product-grid'),
-        store = grid.getStore();
       
-    store.filter([{property:'id', value:value}]);
+    if (eventName === 'id') {
+      store.filter([{property:'id', value:value}]);
+    } else if (eventName === 'description') {
+      store.filter([{property:'description', value:value}]);
+    }
   },
 
   onChange: function(object, value) {
@@ -21,5 +26,5 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilterController', {
     if (!value) {
       store.getFilters().removeAll();
     }
-  }
+  },
 });

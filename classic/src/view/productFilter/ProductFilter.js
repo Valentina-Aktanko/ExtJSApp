@@ -11,7 +11,7 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilter', {
     {
       xtype: 'numberfield',
       fieldLabel: 'ID:',
-      name: 'filerID',
+      name: 'id',
       emptyText: 'Введите фильтр...',
       regex: /^\d+$/,
       regexText: 'Only positive numbers',
@@ -25,8 +25,13 @@ Ext.define('ExtJSApp.view.productFilter.ProductFilter', {
     {
       xtype: 'textfield',
       fieldLabel: 'Описание:',
-      name: 'filterDescription',
-      emptyText: 'Введите фильтр...'
+      name: 'description',
+      emptyText: 'Введите фильтр...',
+      enableKeyEvents: true,
+      listeners: {
+        keyUp: 'onKeyUp',
+        change: 'onChange'
+      }
     },
   ],
 
